@@ -1,6 +1,6 @@
 {
   "name": "@gobysend/typeorm-model-generator",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "description": "Generates models for TypeORM from existing databases. Forked from @Kononnable's GitHub and made the entity name singular.",
   "bin": {
     "typeorm-model-generator": "bin/typeorm-model-generator"
