@@ -1,8 +1,10 @@
 {
-  "name": "typeorm-model-generator",
+  "name": "@gobysend/typeorm-model-generator",
   "version": "0.4.2",
-  "description": "Generates models for TypeORM from existing databases.",
-  "bin": "bin/typeorm-model-generator",
+  "description": "Generates models for TypeORM from existing databases. Forked from @Kononnable's GitHub and made the entity name singular.",
+  "bin": {
+    "typeorm-model-generator": "bin/typeorm-model-generator"
+  },
   "main": "./dist/src/library.js",
   "types": "./dist/src/library.d.ts",
   "scripts": {
@@ -17,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kononnable/typeorm-model-generator.git"
+    "url": "git+git@github.com:gobysend/typeorm-model-generator.git"
   },
   "author": "Kononnable",
   "license": "MIT",
@@ -101,5 +103,13 @@
     "include": [
       "src/**/!(*.test.*).[tj]s?(x)"
     ]
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "keywords": [
+    "typeorm",
+    "typeorm-model-generator",
+    "typeorm-singular-entity"
+  ]
 }

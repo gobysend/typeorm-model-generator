@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { plural } from "pluralize";
+import { plural, singular } from "pluralize";
 import * as changeCase from "change-case";
 import { Relation } from "./models/Relation";
 import { RelationId } from "./models/RelationId";
 import { Entity } from "./models/Entity";
 import { Column } from "./models/Column";
 
-let pluralize: boolean;
+let pluralize: boolean = false;
 
 export function enablePluralization(value: boolean) {
     pluralize = value;
@@ -71,7 +71,7 @@ export function relationName(relation: Relation, owner?: Entity): string {
 }
 
 export function entityName(oldEntityName: string, entity?: Entity): string {
-    return oldEntityName;
+    return singular(oldEntityName) + 'Entity';
 }
 
 export function columnName(oldColumnName: string, column?: Column): string {
